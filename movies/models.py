@@ -6,7 +6,7 @@ from django.urls import reverse
 def attachement_path(instance, filename):
     return "film/" + str(instance.film.id) + "/attachments/" + filename
 
-def poster_path(instaance, filename):
+def poster_path(instance, filename):
     return "film/" + str(instance.id) + "/poster/" + filename
 
 class Genre(models.Model):
@@ -73,4 +73,3 @@ class Attachment(models.Model):
 
     def __str__(self):
         return f"{self.title}, ({self.type})"
-
